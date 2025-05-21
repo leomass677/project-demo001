@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact us</title>
+    <!-- Tailwind CSS-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Fix navbar height */
+        nav {
+            height: 4.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="relative">
+        <!-- nav -->
+        <nav class="fixed top-0 bg-white shadow-2xl  flex items-center w-full px-6 lg:px-24 z-50"
+            aria-label="Primary Navigation">
+            <!-- Logo -->
+            <h2 class="text-2xl font-bold text-[#054b40] flex items-center">
+                <a href="main.html">
+                    <img src="./logo.png" alt="Logo"
+                        class="h-10 w-auto object-contain cursor-pointer hover:opacity-70" />
+                </a>
+            </h2>
+
+            <!-- Hamburger Button (Mobile) -->
+            <button id="menu-btn" aria-label="Toggle menu"
+                class="ml-auto text-3xl lg:hidden focus:outline-none text-[#054b40]">
+                &#9776;
+            </button>
+
+            <!-- Menu Items -->
+            <ul id="menu" class="hidden lg:flex lg:flex-row lg:space-x-8 text-gray-700 font-bold ml-8">
+                <li>
+                    <a href="main.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Home
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="aboutus.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        About Us
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Courses
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="teachers.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Teachers
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blogs.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Blogs
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contactus.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Contact Us
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Contact Icon -->
+            <div class="hidden lg:flex flex-row space-x-4 ml-auto text-xl font-bold text-[#054b40]">
+                <p
+                    class="cursor-pointer text-3xl text-center hover:bg-[#41644A] shadow-lg transition-all duration-300 rounded-full border border-1 w-10 bg-[#626F47] h-10 flex items-center justify-center">
+                    <a href="login.html">
+                        <img src="./contacts.svg" alt="Contact" class="h-5 w-5" />
+                    </a>
+                </p>
+            </div>
+        </nav>
+
+        <!-- mobile -->
+        <div id="mobile-menu"
+            class="fixed top-18 left-0 w-full bg-white shadow-lg z-40 lg:hidden hidden flex-col space-y-4 px-6 py-4">
+            <a href="index.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Home
+            </a>
+            <a href="aboutus.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                About Us
+            </a>
+            <a href="courses.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Courses
+            </a>
+            <a href="teachers.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Teachers
+            </a>
+            <a href="blogs.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Blogs
+            </a>
+            <a href="contactus.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Contact Us
+            </a>
+            <a href="main.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                SignIn /LogIn
+            </a>
+        </div>
+        <main class="flex flex-col w-full h-full mt-18">
+            <div class="max-w-6xl mx-auto">
+
+
+                <!-- Contact Us -->
+                <section class="py-14 bg-white px-6" id="contact">
+                    <div class="max-w-5xl mx-auto text-center">
+                        <h2 class="text-4xl font-bold text-[#054b40] mb-4 font-serif">Contact Us</h2>
+                        <p class="text-lg text-gray-600 mb-10 font-mono leading-relaxed">
+                            Have questions, suggestions, or just want to say hello? We're here to help! Fill out the
+                            form below and our
+                            team will get back to you as soon as possible.
+                        </p>
+
+                        <form class="space-y-6 text-left">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <input type="text" placeholder="Your Name"
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#054b40]"
+                                    required />
+                                <input type="email" placeholder="Your Email"
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#054b40]"
+                                    required />
+                            </div>
+                            <input type="text" placeholder="Subject"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#054b40]"
+                                required />
+                            <textarea placeholder="Your Message" rows="5"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#054b40]"
+                                required></textarea>
+                            <button type="submit"
+                                class="bg-[#054b40] hover:bg-[#07382f] text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#273F4F] mt-20">
+        <div class="flex flex-col lg:flex-row justify-between items-center px-6 lg:px-8 py-8 gap-6">
+            <div class="flex flex-col text-md max-w-md">
+                <h2 class="font-bold font-mono text-xl text-white">
+                    Join Our Newsletter!
+                </h2>
+                <p class="mt-2 font-serif text-white">
+                    Subscribe to get latest updates and information.
+                </p>
+            </div>
+            <form class="relative w-full lg:w-5/12" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                <input type="email" placeholder="Enter your email"
+                    class="w-full h-12 px-4 border border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white"
+                    required />
+                <button type="submit"
+                    class="absolute right-1 top-1 bg-[#064420] hover:bg-[#557571] text-black font-semibold px-4 py-2 rounded-md transition duration-300">
+                    Subscribe Now
+                </button>
+            </form>
+        </div>
+
+        <hr class="border-gray-600" />
+
+        <div class="p-8 flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
+            <p class="text-md text-white">
+                © 2025 Eclass. Design with by Shreethemes.
+            </p>
+            <ul class="flex flex-row text-2xl space-x-2">
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    ⓕ
+                </li>
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    🖂
+                </li>
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    ✆
+                </li>
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    ☎
+                </li>
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    𝕏
+                </li>
+                <li
+                    class="mt-2 h-10 w-10 rounded-lg text-center border border-[#2C5D63] hover:bg-blue-400 hover:animate-bounce transition-all duration-300 cursor-pointer">
+                    <a href="contactus.html">⬆️</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+<script>
+    const hamburgerbutton = () => {
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    }
+    hamburgerbutton();
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !subject || !message) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Simple email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        // Simulate success
+        document.getElementById("successMsg").classList.remove("hidden");
+        this.reset();
+    });
+
+</script>
+
+
+</html>

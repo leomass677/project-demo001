@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>course</title>
+    <!-- Tailwind CSS-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Fix navbar height */
+        nav {
+            height: 4.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="relative">
+        <!-- nav -->
+        <nav class="fixed top-0 bg-white shadow-2xl flex items-center w-full px-6 lg:px-24 z-50"
+            aria-label="Primary Navigation">
+            <!-- Logo -->
+            <h2 class="text-2xl font-bold text-[#054b40] flex items-center">
+                <a href="main.html">
+                    <img src="./logo.png" alt="Logo"
+                        class="h-10 w-auto object-contain cursor-pointer hover:opacity-70" />
+                </a>
+            </h2>
+
+            <!-- Hamburger Button (Mobile) -->
+            <button id="menu-btn" aria-label="Toggle menu"
+                class="ml-auto text-3xl lg:hidden focus:outline-none text-[#054b40]">
+                &#9776;
+            </button>
+
+            <!-- Menu Items -->
+            <ul id="menu" class="hidden lg:flex lg:flex-row lg:space-x-8 text-gray-700 font-bold ml-8">
+                <li>
+                    <a href="main.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Home
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="aboutus.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        About Us
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Courses
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="teachers.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Teachers
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blogs.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Blogs
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contactus.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Contact Us
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Contact Icon -->
+            <div class="hidden lg:flex flex-row space-x-4 ml-auto text-xl font-bold text-[#054b40]">
+                <p
+                    class="cursor-pointer text-3xl text-center hover:bg-[#41644A] shadow-lg transition-all duration-300 rounded-full border border-1 w-10 bg-[#626F47] h-10 flex items-center justify-center">
+                    <a href="login.html">
+                        <img src="./contacts.svg" alt="Contact" class="h-5 w-5" />
+                    </a>
+                </p>
+            </div>
+        </nav>
+        <!-- mobile -->
+        <div id="mobile-menu"
+            class="fixed top-18 left-0 w-full bg-white shadow-lg z-40 lg:hidden hidden flex-col space-y-4 px-6 py-4">
+            <a href="main.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Home
+            </a>
+            <a href="aboutus.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                About Us
+            </a>
+            <a href="courses.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Courses
+            </a>
+            <a href="teachers.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Teachers
+            </a>
+            <a href="blogs.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Blogs
+            </a>
+            <a href="contactus.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Contact Us
+            </a>
+            <a href="login.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                SignIn /LogIn
+            </a>
+        </div>
+
+        <main class="bg-[#FDFAF6] text-center px-4 sm:px-6 md:px-8 py-4 lg:py-14 mt-18 ">
+            <div class="max-w-6xl mx-auto md:ml-23">
+
+                <!--Popular course -->
+                <section class="">
+                    <h2 class="text-2xl lg:text-3xl font-serif text-black font-bold text-center py-2">Popular Courses
+                    </h2>
+                    <p class="text-gray-400 font-bold text-md lg:text-2xl font-mono">
+                        Eclass
+                        offers a more
+                        personalized
+                        learning experience along with the flexibility of learning at your own
+                        pace.</p>
+                    <!--  -->
+                    <div class="mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4
+                    ">
+                        <!-- Card 1 -->
+                        <div class="rounded-lg flex bg-[#EFEEEA] flex-col w-xs h-[28rem] shadow-xl">
+                            <img src="https://shreethemes.in/eclass/assets/images/c1.jpg" alt=""
+                                class="bg-white w-full h-[10rem] object-cover rounded-t-lg">
+                            <div class="flex flex-col text-start space-y-1 px-6 py-2">
+                                <p class="mt-2 text-2xl text-[#A86523]">★★★★★</p>
+                                <h2 class="text-lg text-black font-mono font-bold">UI/UX Design Masterclass</h2>
+                                <p class="text-sm text-gray-400 font-serif font-semibold leading-tight">The Phrasal
+                                    Sequence of the now So many Campaign</p>
+                                <span class="flex space-x-2 mt-1 items-center">
+                                    <img src="https://shreethemes.in/eclass/assets/images/team/1.jpg" alt=""
+                                        class="rounded-full h-8 w-8 object-cover">
+                                    <p class="font-bold text-sm">Ramon Gibson</p>
+                                </span>
+                                <div class="flex mt-1 flex-row space-x-4">
+                                    <p class="text-xs text-[#4E1F00] font-bold">📝10 Lessons</p>
+                                    <p class="text-xs text-[#4E1F00] font-bold">👤49 students</p>
+                                </div>
+                            </div>
+                            <hr class="w-full border-gray-200 border-t">
+                            <div class="flex justify-between items-center py-2 px-6">
+                                <p class="font-bold text-xl">$89</p>
+                                <button
+                                    class="flex items-center h-9 bg-[#054B40] hover:bg-blue-600 text-white font-semibold px-3 py-1 rounded-lg shadow transition duration-300 ease-in-out transform hover:scale-105">
+                                    Explore
+                                    <img src="./right-arrow.png" alt="arrow" class="w-4 h-4 ml-2" />
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <!-- Card 2 -->
+                        <div class="rounded-lg flex bg-[#EFEEEA] flex-col w-xs h-[28rem] shadow-xl">
+                            <img src="https://shreethemes.in/eclass/assets/images/c2.jpg" alt=""
+                                class="bg-white w-full h-[10rem] object-cover rounded-t-lg">
+                            <div class="flex flex-col text-start space-y-1 px-6 py-2">
+                                <p class="mt-2 text-2xl text-[#A86523]">★★★★★</p>
+                                <h2 class="text-lg text-black font-mono font-bold">Data Science & Machine Learning</h2>
+                                <p class="text-sm text-gray-400 font-serif font-semibold leading-tight">The Phrasal
+                                    Sequence of the now So many Campaign</p>
+                                <span class="flex space-x-2 mt-1 items-center">
+                                    <img src="https://shreethemes.in/eclass/assets/images/team/1.jpg" alt=""
+                                        class="rounded-full h-8 w-8 object-cover">
+                                    <p class="font-bold text-sm">Ramon Gibson</p>
+                                </span>
+                                <div class="flex mt-1 flex-row space-x-4">
+                                    <p class="text-xs text-[#4E1F00] font-bold">📝10 Lessons</p>
+                                    <p class="text-xs text-[#4E1F00] font-bold">👤49 students</p>
+                                </div>
+                            </div>
+                            <hr class="w-full border-gray-200 border-t">
+                            <div class="flex justify-between items-center py-2 px-6">
+                                <p class="font-bold text-xl">$109</p>
+                                <button
+                                    class="flex items-center h-9 bg-[#054B40] hover:bg-blue-600 text-white font-semibold px-3 py-1 rounded-lg shadow transition duration-300 ease-in-out transform hover:scale-105">
+                                    Explore
+                                    <img src="./right-arrow.png" alt="arrow" class="w-4 h-4 ml-2" />
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="rounded-lg flex bg-[#EFEEEA] flex-col w-xs h-[28rem] shadow-xl">
+                            <img src="https://shreethemes.in/eclass/assets/images/c3.jpg" alt=""
+                                class="bg-white w-full h-[10rem] object-cover rounded-t-lg">
+                            <div class="flex flex-col text-start space-y-1 px-6 py-2">
+                                <p class="mt-2 text-2xl text-[#A86523]">★★★★★</p>
+                                <h2 class="text-lg text-black font-mono font-bold">Digital Marketing Essentials</h2>
+                                <p class="text-sm text-gray-400 font-serif font-semibold leading-tight">The Phrasal
+                                    Sequence of the now So many Campaign</p>
+                                <span class="flex space-x-2 mt-1 items-center">
+                                    <img src="https://shreethemes.in/eclass/assets/images/team/4.jpg" alt=""
+                                        class="rounded-full h-8 w-8 object-cover">
+                                    <p class="font-bold text-sm">Paul Phelan</p>
+                                </span>
+                                <div class="flex mt-1 flex-row space-x-4">
+                                    <p class="text-xs text-[#4E1F00] font-bold">📝10 Lessons</p>
+                                    <p class="text-xs text-[#4E1F00] font-bold">👤49 students</p>
+                                </div>
+                            </div>
+                            <hr class="w-full border-gray-200 border-t">
+                            <div class="flex justify-between items-center py-2 px-6">
+                                <p class="font-bold text-xl">$69</p>
+                                <button
+                                    class="flex items-center h-9 bg-[#054B40] hover:bg-blue-600 text-white font-semibold px-3 py-1 rounded-lg shadow transition duration-300 ease-in-out transform hover:scale-105">
+                                    Explore
+                                    <img src="./right-arrow.png" alt="arrow" class="w-4 h-4 ml-2" />
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="rounded-lg flex bg-[#EFEEEA] flex-col w-xs h-[28rem] shadow-xl">
+                            <img src="https://shreethemes.in/eclass/assets/images/c4.jpg" alt=""
+                                class="bg-white w-full h-[10rem] object-cover rounded-t-lg">
+                            <div class="flex flex-col text-start space-y-1 px-6 py-2">
+                                <p class="mt-2 text-2xl text-[#A86523]">★★★★★</p>
+                                <h2 class="text-lg text-black font-mono font-bold">Cloud Computing with AWS</h2>
+                                <p class="text-sm text-gray-400 font-serif font-semibold leading-tight">The Phrasal
+                                    Sequence of the now So many Campaign</p>
+                                <span class="flex space-x-2 mt-1 items-center">
+                                    <img src="https://shreethemes.in/eclass/assets/images/team/4.jpg" alt=""
+                                        class="rounded-full h-8 w-8 object-cover">
+                                    <p class="font-bold text-sm">Paul Phelan</p>
+                                </span>
+                                <div class="flex mt-1 flex-row space-x-4">
+                                    <p class="text-xs text-[#4E1F00] font-bold">📝10 Lessons</p>
+                                    <p class="text-xs text-[#4E1F00] font-bold">👤49 students</p>
+                                </div>
+                            </div>
+                            <hr class="w-full border-gray-200 border-t">
+                            <div class="flex justify-between items-center py-2 px-6">
+                                <p class="font-bold text-xl">$119</p>
+                                <button
+                                    class="flex items-center h-9 bg-[#054B40] hover:bg-blue-600 text-white font-semibold px-3 py-1 rounded-lg shadow transition duration-300 ease-in-out transform hover:scale-105">
+                                    Explore
+                                    <img src="./right-arrow.png" alt="arrow" class="w-4 h-4 ml-2" />
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="rounded-lg flex bg-[#EFEEEA] flex-col w-xs h-[28rem] shadow-xl">
+                            <img src="https://shreethemes.in/eclass/assets/images/c5.jpg" alt=""
+                                class="bg-white w-full h-[10rem] object-cover rounded-t-lg">
+                            <div class="flex flex-col text-start space-y-1 px-6 py-2">
+                                <p class="mt-2 text-2xl text-[#A86523]">★★★★★</p>
+                                <h2 class="text-lg text-black font-mono font-bold">Full-Stack Web Development</h2>
+                                <p class="text-sm text-gray-400 font-serif font-semibold leading-tight">The Phrasal
+                                    Sequence of the now So many Campaign</p>
+                                <span class="flex space-x-2 mt-1 items-center">
+                                    <img src="https://shreethemes.in/eclass/assets/images/team/2.jpg" alt=""
+                                        class="rounded-full h-8 w-8 object-cover">
+                                    <p class="font-bold text-sm">Megan Ceda</p>
+                                </span>
+                                <div class="flex mt-1 flex-row space-x-4">
+                                    <p class="text-xs text-[#4E1F00] font-bold">📝10 Lessons</p>
+                                    <p class="text-xs text-[#4E1F00] font-bold">👤49 students</p>
+                                </div>
+                            </div>
+                            <hr class="w-full border-gray-200 border-t">
+                            <div class="flex justify-between items-center py-2 px-6">
+                                <p class="font-bold text-xl">$99</p>
+                                <button
+                                    class="flex items-center h-9 bg-[#054B40] hover:bg-blue-600 text-white font-semibold px-3 py-1 rounded-lg shadow transition duration-300 ease-in-out transform hover:scale-105">
+                                    Explore
+                                    <img src="./right-arrow.png" alt="arrow" class="w-4 h-4 ml-2" />
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="rounded-lg flex bg-[#EFEEEA] flex-col w-xs h-[28rem] shadow-xl">
+                            <img src="https://shreethemes.in/eclass/assets/images/c6.jpg" alt=""
+                                class="bg-white w-full h-[10rem] object-cover rounded-t-lg">
+                            <div class="flex flex-col text-start space-y-1 px-6 py-2">
+                                <p class="mt-2 text-2xl text-[#A86523]">★★★★★</p>
+                                <h2 class="text-lg text-black font-mono font-bold">Project Manager</h2>
+                                <p class="text-sm text-gray-400 font-serif font-semibold leading-tight">The Phrasal
+                                    Sequence of the now So many Campaign</p>
+                                <span class="flex space-x-2 mt-1 items-center">
+                                    <img src="https://shreethemes.in/eclass/assets/images/team/2.jpg" alt=""
+                                        class="rounded-full h-8 w-8 object-cover">
+                                    <p class="font-bold text-sm">Megan Ceda</p>
+                                </span>
+                                <div class="flex mt-1 flex-row space-x-4">
+                                    <p class="text-xs text-[#4E1F00] font-bold">📝10 Lessons</p>
+                                    <p class="text-xs text-[#4E1F00] font-bold">👤49 students</p>
+                                </div>
+                            </div>
+                            <hr class="w-full border-gray-200 border-t">
+                            <div class="flex justify-between items-center py-2 px-6">
+                                <p class="font-bold text-xl">$79</p>
+                                <button
+                                    class="flex items-center h-9 bg-[#054B40] hover:bg-blue-600 text-white font-semibold px-3 py-1 rounded-lg shadow transition duration-300 ease-in-out transform hover:scale-105">
+                                    Explore
+                                    <img src="./right-arrow.png" alt="arrow" class="w-4 h-4 ml-2" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#273F4F] mt-20">
+        <div class="flex flex-col lg:flex-row justify-between items-center px-6 lg:px-8 py-8 gap-6">
+            <div class="flex flex-col text-md max-w-md">
+                <h2 class="font-bold font-mono text-xl text-white">
+                    Join Our Newsletter!
+                </h2>
+                <p class="mt-2 font-serif text-white">
+                    Subscribe to get latest updates and information.
+                </p>
+            </div>
+            <form class="relative w-full lg:w-5/12" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                <input type="email" placeholder="Enter your email"
+                    class="w-full h-12 px-4 border border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white"
+                    required />
+                <button type="submit"
+                    class="absolute right-1 top-1 bg-[#064420] hover:bg-[#557571] text-black font-semibold px-4 py-2 rounded-md transition duration-300">
+                    Subscribe Now
+                </button>
+            </form>
+        </div>
+
+        <hr class="border-gray-600" />
+
+        <div class="p-8 flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
+            <p class="text-md text-white">
+                © 2025 Eclass. Design with by Shreethemes.
+            </p>
+            <ul class="flex flex-row text-2xl space-x-2">
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    ⓕ
+                </li>
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    🖂
+                </li>
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    ✆
+                </li>
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    ☎
+                </li>
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    𝕏
+                </li>
+                <li
+                    class="mt-2 h-10 w-10 rounded-lg text-center border border-[#2C5D63] hover:bg-blue-400 hover:animate-bounce transition-all duration-300 cursor-pointer">
+                    <a href="courses.html">⬆️</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+<script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+    // Select all buttons
+    document.querySelectorAll('button').forEach(function (btn) {
+        if (btn.textContent.trim().startsWith('Explore')) {
+            btn.addEventListener('click', function () {
+                const courseTitles = document.getElementById(courseTitle);
+                alert('button clicked!');
+            });
+        }
+    });
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign In</title>
+    <!-- Tailwind CSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white p-8 rounded-2xl shadow-md w-full max-w-sm">
+        <div class="flex flex-row justify-center w-full space-x-2 mb-6">
+            <a href="main.html">
+                <img src="./logo.png" alt="Logo"
+                    class="h-10 w-10 object-cover cursor-pointer hover:opacity-70 transition-all ease-in-out" />
+            </a>
+            <h2 class="text-2xl font-bold text-center text-gray-800">Welcome</h2>
+        </div>
+
+        <form id="signInForm" novalidate>
+            <div class="mb-4 flex space-x-2">
+                <div class="flex flex-col w-1/2">
+                    <label for="firstName" class="block text-gray-600 mb-1">First Name</label>
+                    <input id="firstName" name="firstName" type="text" required
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Enter first name" />
+                </div>
+                <div class="flex flex-col w-1/2">
+                    <label for="lastName" class="block text-gray-600 mb-1">Last Name</label>
+                    <input id="lastName" name="lastName" type="text" required
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Enter last name" />
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block text-gray-600 mb-1">Email</label>
+                <input id="email" name="email" type="email" required
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter email address" />
+            </div>
+
+            <div class="mb-6 relative">
+                <label for="password" class="block text-gray-600 mb-1">Password</label>
+                <input id="password" name="password" type="password" required minlength="6"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10"
+                    placeholder="Enter password" />
+                <button type="button" id="togglePassword" aria-label="Toggle password visibility"
+                    class="absolute top-8 right-3 text-gray-500 hover:text-gray-700 focus:outline-none">
+                    👁️
+                </button>
+                <p class="text-xs text-gray-500 mt-1">Password must be at least 6 characters.</p>
+            </div>
+
+            <div id="errorMsg" aria-live="assertive" class="text-red-500 text-center text-sm mb-4"></div>
+
+            <div class="flex flex-col space-y-3">
+                <button type="submit" id="signInBtn"
+                    class="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg font-semibold transition disabled:opacity-50">
+                    Sign In
+                </button>
+                <a href="login.html"
+                    class="bg-green-500 text-center hover:bg-green-600 font-semibold transition duration-600 text-white py-2 rounded-lg">
+                    Log In
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const signInForm = document.getElementById('signInForm');
+        const firstNameInput = document.getElementById('firstName');
+        const lastNameInput = document.getElementById('lastName');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const errorMsg = document.getElementById('errorMsg');
+        const signInBtn = document.getElementById('signInBtn');
+        const togglePassword = document.getElementById('togglePassword');
+
+        togglePassword.addEventListener('click', () => {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                togglePassword.textContent = '🙈';
+            } else {
+                passwordInput.type = 'password';
+                togglePassword.textContent = '👁️';
+            }
+            passwordInput.focus();
+        });
+
+        signInForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const firstName = firstNameInput.value.trim();
+            const lastName = lastNameInput.value.trim();
+            const email = emailInput.value.trim();
+            const password = passwordInput.value.trim();
+
+            // email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!firstName || !lastName || !email || !password) {
+                errorMsg.textContent = 'Please fill in all fields.';
+                return;
+            }
+
+            if (!emailRegex.test(email)) {
+                errorMsg.textContent = 'Please enter a valid email address.';
+                return;
+            }
+
+            if (password.length < 6) {
+                errorMsg.textContent = 'Password must be at least 6 characters.';
+                return;
+            }
+
+            // Clear error message and disable button
+            errorMsg.textContent = '';
+            signInBtn.disabled = true;
+            signInBtn.textContent = 'Signing in...';
+
+            // wait for sec
+            setTimeout(() => {
+                alert(`Sign In successful. Welcome, ${firstName} ${lastName}!`);
+                signInBtn.disabled = false;
+                signInBtn.textContent = 'Sign In';
+
+            }, 1000);
+        });
+    </script>
+
+</body>
+
+</html>

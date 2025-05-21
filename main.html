@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>main</title>
+  <!-- Tailwind CSS-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fix navbar height */
+    nav {
+      height: 4.5rem;
+    }
+  </style>
+</head>
+
+<body class="bg-[#FDFAF6]">
+  <div class="relative">
+    <!-- Navbar -->
+    <nav class="fixed top-0 bg-white shadow-2xl flex items-center w-full px-6 lg:px-24 z-50"
+      aria-label="Primary Navigation">
+      <!-- Logo -->
+      <h2 class="text-2xl font-bold text-[#054b40] flex items-center">
+        <a href="main.html">
+          <img src="./logo.png" alt="Logo" class="h-10 w-auto object-contain cursor-pointer hover:opacity-70" />
+        </a>
+      </h2>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="menu-btn" aria-label="Toggle menu"
+        class="ml-auto text-3xl lg:hidden focus:outline-none text-[#054b40]">
+        &#9776;
+      </button>
+
+      <!-- Menu Items -->
+      <ul id="menu" class="hidden lg:flex lg:flex-row lg:space-x-8 text-gray-700 font-bold ml-8">
+        <li>
+          <a href="main.html" class="hover:text-[#054b40] transition duration-300 relative group">
+            Home
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="aboutus.html" class="hover:text-[#054b40] transition duration-300 relative group">
+            About Us
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="courses.html" class="hover:text-[#054b40] transition duration-300 relative group">
+            Courses
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="teachers.html" class="hover:text-[#054b40] transition duration-300 relative group">
+            Teachers
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="blogs.html" class="hover:text-[#054b40] transition duration-300 relative group">
+            Blogs
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="contactus.html" class="hover:text-[#054b40] transition duration-300 relative group">
+            Contact Us
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Contact Icon -->
+      <div class="hidden lg:flex flex-row space-x-4 ml-auto text-xl font-bold text-[#054b40]">
+        <p
+          class="cursor-pointer text-3xl text-center hover:bg-[#41644A] shadow-lg transition-all duration-300 rounded-full border border-1 w-10 bg-[#626F47] h-10 flex items-center justify-center">
+          <a href="login.html">
+            <img src="./contacts.svg" alt="Contact" class="h-5 w-5" />
+          </a>
+        </p>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu"
+      class="fixed top-18 left-0 w-full bg-white shadow-lg z-40 lg:hidden hidden flex-col space-y-4 px-6 py-4">
+      <a href="main.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+        Home
+      </a>
+      <a href="aboutus.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+        About Us
+      </a>
+      <a href="courses.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+        Courses
+      </a>
+      <a href="teachers.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+        Teachers
+      </a>
+      <a href="blogs.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+        Blogs
+      </a>
+      <a href="contactus.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+        Contact Us
+      </a>
+      <a href="login.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+        SignIn /LogIn
+      </a>
+    </div>
+
+    <main class="flex flex-col w-full h-full mt-18 pt-20">
+      <div class="max-w-6xl mx-auto px-4">
+
+        <!--  -->
+
+
+        <section
+          class="flex flex-col-reverse  py-12 lg:flex-row justify-between bg-[#054b40] gap-10 lg:min-h-[85vh] lg:px-36 px-6 items-center lg:gap-12">
+          <div class="flex  justify-start items-start flex-col">
+            <h1 class="lg:text-5xl text-3xl text-white font-bold">
+              Welcome to your online journey
+            </h1>
+            <p class="lg:text-xl text-md text-white mt-4">
+              Eclass offers a more personalized learning experience along with
+              the flexibility of learning at your own pace.
+            </p>
+            <form class="relative mt-8 w-full">
+              <input type="email" placeholder="Enter your email"
+                class="w-full h-12 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                required />
+              <button type="submit"
+                class="absolute right-1 top-1 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 py-2 rounded-md transition duration-300">
+                Subscribe Now
+              </button>
+            </form>
+          </div>
+          <!-- Hero Images -->
+          <div class="relative  w-full max-w-md lg:h-[300px] h-[250px] mx-auto">
+            <!-- Top image (larger, center) -->
+            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 lg:size-52 size-[40] rounded-full z-10">
+              <img src="https://cdn.pixabay.com/photo/2024/09/30/13/40/child-9085875_1280.jpg" alt="top"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl" />
+            </div>
+
+            <!-- Bottom left image -->
+            <div class="absolute bottom-0 left-1/3 transform -translate-x-[90%] lg:size-40 size-32 rounded-full z-0">
+              <img src="https://cdn.pixabay.com/photo/2023/07/31/03/07/chick-8160008_1280.jpg" alt="left"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-md" />
+            </div>
+
+            <!-- Bottom right image -->
+            <div class="absolute top-0 right-1/3 transform translate-x-[90%] lg:size-40 size-32 rounded-full z-0">
+              <img src="https://cdn.pixabay.com/photo/2024/02/17/05/33/ai-generated-8578746_1280.jpg" alt="right"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-md" />
+            </div>
+          </div>
+
+
+        </section>
+        <!--  -->
+        <section class="flex flex-col justify-between bg-white  lg:px-36 items-center h-full gap-8 lg:min-w-7xl my-24">
+          <h2 class="text-3xl font-serif text-black font-bold lg:text-center text-start py-2">Explore Categories</h2>
+          <p class="text-gray-400 px-8 font-bold text-xl lg:text-center text-start w-4xl font-mono">
+            Eclass offers a more personalized learning experience along with the flexibility of learning
+            at
+            your own
+            pace.
+          </p>
+          <div class="grid lg:grid-cols-4 grid-cols-2 mt-20   gap-x-12 gap-y-20 lg:gap-30 lg:mt-24">
+            <!-- Category 1 -->
+            <ul
+              class="relative flex flex-col justify-center items-center cursor-pointer bg-white border-gray-300 size-40 rounded-lg shadow-lg text-black font-bold">
+              <li>
+                <div
+                  class="absolute -top-10 left-[15%] w-15 h-25 object-cover border-gray-100 rounded-full shadow-md hover:shadow-lg transition duration-300 hover:scale-105 hover:rotate-12 hover:translate-x-2 hover:translate-y-2 hover:bg-[#054b40]">
+                  <img src="./ui-ux.png" alt="logo" class="rounded-full mt-6 h-14 w-14 object-cover">
+                </div>
+              <li class="mt-8"><a href="#">UI/UX Design</a></li>
+              <li class="text-gray-400">20 Courses</li>
+              <li class="flex flex-row items-center space-x-2"><a href="#">Learn More</a><img src="./right-arrow.png"
+                  alt="arrow" class="w-4 h-6 pt-2"></li>
+              </li>
+            </ul>
+            <!-- Category 2 -->
+            <ul
+              class="relative flex flex-col justify-center items-center cursor-pointer bg-white border-gray-300 size-40 rounded-lg shadow-lg text-black font-bold">
+              <li>
+                <div
+                  class="absolute -top-10 left-[15%] w-15 h-25 object-cover border-gray-100 rounded-full shadow-md hover:shadow-lg transition duration-300 hover:scale-105 hover:rotate-12 hover:translate-x-2 hover:translate-y-2 hover:bg-[#054b40]">
+                  <img src="./web-design.png" alt="logo" class="rounded-full mt-6 h-14 w-14 object-cover">
+                </div>
+              <li class="mt-8"><a href="#">Web Design</a></li>
+              <li class="text-gray-400">20 Courses</li>
+              <li class="flex flex-row items-center space-x-2"><a href="#">Learn More</a><img src="./right-arrow.png"
+                  alt="arrow" class="w-4 h-6 pt-2"></li>
+              </li>
+            </ul>
+            <!-- Category 3 -->
+            <ul
+              class="relative flex flex-col justify-center items-center cursor-pointer bg-white border-gray-300 size-40 rounded-lg shadow-lg text-black font-bold">
+              <li>
+                <div
+                  class="absolute -top-10 left-[15%] w-15 h-25 object-cover border-gray-100 rounded-full shadow-md hover:shadow-lg transition duration-300 hover:scale-105 hover:rotate-12 hover:translate-x-2 hover:translate-y-2 hover:bg-[#054b40]">
+                  <img src="./analysis.png" alt="logo" class="rounded-full mt-6 h-14 w-14 object-cover">
+                </div>
+              <li class="mt-8"><a href="#">Data Analysis</a></li>
+              <li class="text-gray-400">20 Courses</li>
+              <li class="flex flex-row items-center space-x-2"><a href="#">Learn More</a><img src="./right-arrow.png"
+                  alt="arrow" class="w-4 h-6 pt-2"></li>
+              </li>
+
+            </ul>
+            <!-- Category 4 -->
+            <ul
+              class="relative flex flex-col justify-center items-center cursor-pointer bg-white border-gray-300 size-40 rounded-lg shadow-lg text-black font-bold">
+              <li>
+                <div
+                  class="absolute -top-10 left-[15%] w-15 h-25 object-cover border-gray-100 rounded-full shadow-md hover:shadow-lg transition duration-300 hover:scale-105 hover:rotate-12 hover:translate-x-2 hover:translate-y-2 hover:bg-[#054b40]">
+                  <img src="./full-stack.png" alt="logo" class="rounded-full mt-6 h-14 w-14 object-cover">
+                </div>
+              <li class="mt-8"><a href="#">Full Stack</a></li>
+              <li class="text-gray-400">20 Courses</li>
+              <li class="flex flex-row items-center space-x-2"><a href="#">Learn More</a><img src="./right-arrow.png"
+                  alt="arrow" class="w-4 h-6 pt-2"></li>
+              </li>
+
+            </ul>
+          </div>
+          <!--  -->
+
+          <hr>
+
+        </section>
+
+        <!--  -->
+        <section>
+          <div class="flex flex-col lg:flex-row justify-between items-center w-6xl h-full gap-x-10 lg:gap-x-50">
+            <div class="relative w-full lg:w-[35vw]">
+              <div class=" h-[80vh] w-full flex flex-col justify-center lg:justify-between   lg:items-center lg:mt-24">
+                <img src="https://cdn.pixabay.com/photo/2024/08/13/16/10/ai-generated-8966392_1280.jpg" alt="student"
+                  class="w-[90%]   h-[90%] lg:h-full object-cover rounded-tl-[60px] lg:rounded-tl-[100px] rounded-xl">
+
+                <!--  -->
+                <div
+                  class="absolute lg:mt-2 mt-4 mx-4   lg:mx-6 lg:top-75 lg:left-3/4 top-1/2 right-0  size-40 ring-4 ring-white rounded-lg rounded-br-[70px]  bg-white shadow-lg flex items-center justify-center">
+                  <img src="https://cdn.pixabay.com/photo/2015/05/31/10/55/man-791049_1280.jpg" alt="img"
+                    class="size-40 object-cover rounded-lg rounded-br-[70px]">
+                </div>
+                <!--  -->
+                <div
+                  class="bg-white top-3/5 right-0 right- lg:mt-12   h-20 w-52 rounded-full absolute lg:left-3/4 lg:top-48 flex justify-between items-center flex-row pr-4">
+                  <img src="./online-course.png" alt="student"
+                    class="size-16 bg-gray-800 object-cover rounded-full ml-2">
+                  <p class="font-bold text-md text-gray-400">Total Courses <br><span
+                      class="text-black font-mono text-xl">225+</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="flex flex-col lg:w-1/2 space-y-8 mt-24 lg:space-y-4 ">
+              <h2 class="text-3xl text-black font-bold">Navigate success with our AI expertise</h2>
+              <p class="text-lg text-gray-400 hidden">
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                labore et
+                dolore magnam
+                aliquam quaerat voluptatem.
+              </p>
+              <ul class="grid grid-cols-2 gap-4 mt-8">
+                <li>✔️ Business Consultation</li>
+                <li>✔️ Salary Scheduling</li>
+                <li>✔️ Earning Reports</li>
+                <li>✔️ Archive Management</li>
+                <li>✔️ Digital Solutions</li>
+                <li>✔️ World-class support</li>
+              </ul>
+              <button
+                class="flex items-center w-40 justify-center bg-blue-500 hover:bg-blue-600 text-white font-semibold px-2 py-2 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                Explore More
+                <img src="./right-arrow.png" alt="arrow"
+                  class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+              </button>
+            </div>
+          </div>
+        </section>
+
+
+
+      </div>
+
+
+    </main>
+  </div>
+  <!-- footer -->
+  <footer class="w-full bg-[#273F4F] mt-20">
+    <div class="flex flex-col lg:flex-row justify-between items-center px-6 lg:px-8 py-8 gap-6">
+      <div class="flex flex-col text-md max-w-md">
+        <h2 class="font-bold font-mono text-xl text-white">
+          Join Our Newsletter!
+        </h2>
+        <p class="mt-2 font-serif text-white">
+          Subscribe to get latest updates and information.
+        </p>
+      </div>
+      <form class="relative w-full lg:w-5/12" onsubmit="event.preventDefault(); alert('Subscribed!');">
+        <input type="email" placeholder="Enter your email"
+          class="w-full h-12 px-4 border border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white"
+          required />
+        <button type="submit"
+          class="absolute right-1 top-1 bg-[#064420] hover:bg-[#557571] text-black font-semibold px-4 py-2 rounded-md transition duration-300">
+          Subscribe Now
+        </button>
+      </form>
+    </div>
+
+    <hr class="border-gray-600" />
+
+    <div class="p-8 flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
+      <p class="text-md text-white">
+        © 2025 Eclass. Design with by Shreethemes.
+      </p>
+      <ul class="flex flex-row text-2xl space-x-2">
+        <li
+          class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+          ⓕ
+        </li>
+        <li
+          class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+          🖂
+        </li>
+        <li
+          class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+          ✆
+        </li>
+        <li
+          class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+          ☎
+        </li>
+        <li
+          class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+          𝕏
+        </li>
+        <li
+          class="mt-2 h-10 w-10 rounded-lg text-center border border-[#2C5D63] hover:bg-blue-400 hover:animate-bounce transition-all duration-300 cursor-pointer">
+          <a href="main.html">⬆️</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+
+</html>

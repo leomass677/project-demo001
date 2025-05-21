@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eclass - Teacher's Staff</title>
+    <!-- Tailwind CSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Fix navbar height */
+        nav {
+            height: 4.5rem;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <div class="relative">
+        <!-- Navbar -->
+        <nav class="fixed top-0 bg-white shadow-2xl flex items-center w-full px-6 lg:px-24 z-50"
+            aria-label="Primary Navigation">
+            <!-- Logo -->
+            <h2 class="text-2xl font-bold text-[#054b40] flex items-center">
+                <a href="main.html">
+                    <img src="./logo.png" alt="Logo"
+                        class="h-10 w-auto object-contain cursor-pointer hover:opacity-70" />
+                </a>
+            </h2>
+
+            <!-- Hamburger Button (Mobile) -->
+            <button id="menu-btn" aria-label="Toggle menu"
+                class="ml-auto text-3xl lg:hidden focus:outline-none text-[#054b40]">
+                &#9776;
+            </button>
+
+            <!-- Menu Items -->
+            <ul id="menu" class="hidden lg:flex lg:flex-row lg:space-x-8 text-gray-700 font-bold ml-8">
+                <li>
+                    <a href="main.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Home
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="aboutus.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        About Us
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Courses
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="teachers.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Teachers
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blogs.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Blogs
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contactus.html" class="hover:text-[#054b40] transition duration-300 relative group">
+                        Contact Us
+                        <span
+                            class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#054b40] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Contact Icon -->
+            <div class="hidden lg:flex flex-row space-x-4 ml-auto text-xl font-bold text-[#054b40]">
+                <p
+                    class="cursor-pointer text-3xl text-center hover:bg-[#41644A] shadow-lg transition-all duration-300 rounded-full border border-1 w-10 bg-[#626F47] h-10 flex items-center justify-center">
+                    <a href="login.html">
+                        <img src="./contacts.svg" alt="Contact" class="h-5 w-5" />
+                    </a>
+                </p>
+            </div>
+        </nav>
+        <!-- mobile -->
+        <div id="mobile-menu"
+            class="fixed top-18 left-0 w-full bg-white shadow-lg z-40 lg:hidden hidden flex-col space-y-4 px-6 py-4">
+            <a href="main.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Home
+            </a>
+            <a href="aboutus.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                About Us
+            </a>
+            <a href="courses.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Courses
+            </a>
+            <a href="teachers.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Teachers
+            </a>
+            <a href="blogs.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Blogs
+            </a>
+            <a href="contactus.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                Contact Us
+            </a>
+            <a href="login.html" class="block py-2 font-bold text-[#054b40] hover:bg-[#FDFAF6] rounded">
+                SignIn /LogIn
+            </a>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex flex-col w-full h-full mt-16">
+            <div class="max-w-6xl mx-auto px-6">
+
+                <!-- Teacher's Staff Section -->
+                <section class="bg-[#F5F5F5] py-14 text-center rounded-lg">
+                    <h2 class="text-3xl font-serif font-bold text-black py-2">Teacher's Staff</h2>
+                    <p class="text-gray-400 font-bold text-xl mx-auto w-3/4 font-mono">Eclass offers a more personalized
+                        learning experience along with the flexibility of learning at your own pace.</p>
+
+                    <div class="flex flex-wrap justify-center gap-x-10 gap-y-12 mt-24 px-8">
+                        <!-- Teacher Card -->
+                        <div class="w-64 text-center">
+                            <div
+                                class="w-64 h-64 rounded-full overflow-hidden border-4 border-[#FDFAF6] shadow-md mx-auto">
+                                <img src="https://shreethemes.in/eclass/assets/images/team/1.jpg"
+                                    alt="Portrait of Ramon Gibson" class="w-full h-full object-cover" />
+                            </div>
+                            <h3 class="font-bold text-2xl mt-4">Ramon Gibson</h3>
+                            <p class="text-gray-400 text-md">Teacher</p>
+                        </div>
+
+                        <div class="w-64 text-center">
+                            <div
+                                class="w-64 h-64 rounded-full overflow-hidden border-4 border-[#FDFAF6] shadow-md mx-auto">
+                                <img src="https://shreethemes.in/eclass/assets/images/team/4.jpg"
+                                    alt="Portrait of Paul Phelan" class="w-full h-full object-cover" />
+                            </div>
+                            <h3 class="font-bold text-2xl mt-4">Paul Phelan</h3>
+                            <p class="text-gray-400 text-md">Teacher</p>
+                        </div>
+
+                        <div class="w-64 text-center">
+                            <div
+                                class="w-64 h-64 rounded-full overflow-hidden border-4 border-[#FDFAF6] shadow-md mx-auto">
+                                <img src="https://shreethemes.in/eclass/assets/images/team/2.jpg"
+                                    alt="Portrait of Megan Ceda" class="w-full h-full object-cover" />
+                            </div>
+                            <h3 class="font-bold text-2xl mt-4">Megan Ceda</h3>
+                            <p class="text-gray-400 text-md">Teacher</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials Section -->
+                    <div class="mt-24">
+                        <h2 class="text-3xl font-serif font-bold text-black py-2">What Our Students Say?</h2>
+                        <p class="text-gray-400 font-bold text-xl text-center w-4/5 font-mono mx-auto">
+                            Saasko is a full-service brand agency for purpose driven companies. We build brands that
+                            look good, and
+                            sound good.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center gap-6 mt-24 px-8">
+                            <!-- Testimonial Card -->
+                            <div
+                                class="w-72 bg-white flex flex-col justify-between rounded-lg shadow-xl p-6 relative overflow-hidden">
+                                <p class="text-md font-bold text-[#854836] text-left">I didn't know a thing about icon
+                                    design until I
+                                    read this book. Now I can create any icon I need in no time. Great resource!</p>
+                                <p class="text-2xl text-[#A86523] mt-4">★★★★★</p>
+                                <div class="flex items-center space-x-4 mt-6">
+                                    <img src="https://shreethemes.in/eclass/assets/images/team/2.jpg" alt="Megan Ceda"
+                                        class="rounded-full h-10 w-10 object-cover" />
+                                    <div>
+                                        <p class="font-bold text-md">Megan Ceda</p>
+                                        <p class="text-sm font-bold">Teacher</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="w-72 bg-white flex flex-col justify-between rounded-lg shadow-xl p-6 relative overflow-hidden">
+                                <p class="text-md font-bold text-[#854836] text-left">I didn't know a thing about icon
+                                    design until I
+                                    read this book. Now I can create any icon I need in no time. Great resource!</p>
+                                <p class="text-2xl text-[#A86523] mt-4">★★★★★</p>
+                                <div class="flex items-center space-x-4 mt-6">
+                                    <img src="https://shreethemes.in/eclass/assets/images/team/3.jpg"
+                                        alt="Stella Robinson" class="rounded-full h-10 w-10 object-cover" />
+                                    <div>
+                                        <p class="font-bold text-md">Stella Robinson</p>
+                                        <p class="text-sm font-bold">CEO</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="w-72 bg-white flex flex-col justify-between rounded-lg shadow-xl p-6 relative overflow-hidden">
+                                <p class="text-md font-bold text-[#854836] text-left">I didn't know a thing about icon
+                                    design until I
+                                    read this book. Now I can create any icon I need in no time. Great resource!</p>
+                                <p class="text-2xl text-[#A86523] mt-4">★★★★★</p>
+                                <div class="flex items-center space-x-4 mt-6">
+                                    <img src="https://shreethemes.in/eclass/assets/images/team/5.jpg" alt="Curl Oliver"
+                                        class="rounded-full h-10 w-10 object-cover" />
+                                    <div>
+                                        <p class="font-bold text-md">Curl Oliver</p>
+                                        <p class="text-sm font-bold">Manager</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="w-72 bg-white flex flex-col justify-between rounded-lg shadow-xl p-6 relative overflow-hidden">
+                                <p class="text-md font-bold text-[#854836] text-left">I didn't know a thing about icon
+                                    design until I
+                                    read this book. Now I can create any icon I need in no time. Great resource!</p>
+                                <p class="text-2xl text-[#A86523] mt-4">★★★★★</p>
+                                <div class="flex items-center space-x-4 mt-6">
+                                    <img src="https://shreethemes.in/eclass/assets/images/team/1.jpg" alt="Ramon Gibson"
+                                        class="rounded-full h-10 w-10 object-cover" />
+                                    <div>
+                                        <p class="font-bold text-md">Ramon Gibson</p>
+                                        <p class="text-sm font-bold">Teacher</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </main>
+    </div>
+    <!-- Footer -->
+    <footer class="w-full bg-[#273F4F] mt-20">
+        <div class="flex flex-col lg:flex-row justify-between items-center px-6 lg:px-8 py-8 gap-6">
+            <div class="flex flex-col text-md max-w-md">
+                <h2 class="font-bold font-mono text-xl text-white">
+                    Join Our Newsletter!
+                </h2>
+                <p class="mt-2 font-serif text-white">
+                    Subscribe to get latest updates and information.
+                </p>
+            </div>
+            <form class="relative w-full lg:w-5/12" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                <input type="email" placeholder="Enter your email"
+                    class="w-full h-12 px-4 border border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white"
+                    required />
+                <button type="submit"
+                    class="absolute right-1 top-1 bg-[#064420] hover:bg-[#557571] text-black font-semibold px-4 py-2 rounded-md transition duration-300">
+                    Subscribe Now
+                </button>
+            </form>
+        </div>
+
+        <hr class="border-gray-600" />
+
+        <div class="p-8 flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
+            <p class="text-md text-white">
+                © 2025 Eclass. Design with by Shreethemes.
+            </p>
+            <ul class="flex flex-row text-2xl space-x-2">
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    ⓕ
+                </li>
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    🖂
+                </li>
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    ✆
+                </li>
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    ☎
+                </li>
+                <li
+                    class="h-9 w-9 rounded-lg text-center border border-[#2C5D63] hover:bg-[#406661] transition-all duration-300 cursor-pointer">
+                    𝕏
+                </li>
+                <li
+                    class="mt-2 h-10 w-10 rounded-lg text-center border border-[#2C5D63] hover:bg-blue-400 hover:animate-bounce transition-all duration-300 cursor-pointer">
+                    <a href="teachers.html">⬆️</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+</script>
+
+</html>
